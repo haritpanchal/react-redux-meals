@@ -5,10 +5,9 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const cartItems = useSelector((state) => state.cart.items);
-  console.log(cartItems);
   const cartContent = cartItems.map((item) => (
     <CartItem
-      key={item.itemId}
+      key={item.id}
       item={{
         id: item.itemId,
         title: item.title,
